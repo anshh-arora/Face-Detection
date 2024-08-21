@@ -4,12 +4,12 @@ import cv2
 import mediapipe as mp
 import shutil
 
-# Define file paths
-image_folder = r"C:\Users\GGN06-Ansh\OneDrive - Smartworks Co-working Spaces Private Limited\Desktop\Mediapipe face mesh detection\Test_images_data"
-frontal_faces_folder = r"C:\Users\GGN06-Ansh\OneDrive - Smartworks Co-working Spaces Private Limited\Desktop\Mediapipe face mesh detection\Frontal_face_data"
-non_frontal_faces_folder = r"C:\Users\GGN06-Ansh\OneDrive - Smartworks Co-working Spaces Private Limited\Desktop\Mediapipe face mesh detection\Non_Frontal_face_data"
-rejected_quality_folder = r"C:\Users\GGN06-Ansh\OneDrive - Smartworks Co-working Spaces Private Limited\Desktop\Mediapipe face mesh detection\Rejected_Quality_images"
-frontal_cropped_faces_folder = r"C:\Users\GGN06-Ansh\OneDrive - Smartworks Co-working Spaces Private Limited\Desktop\Mediapipe face mesh detection\Frontal_Cropped_face_data"
+# Define file paths (Replace these placeholders with your actual folder paths)
+image_folder = r"ENTER_YOUR_IMAGE_FOLDER_PATH"
+frontal_faces_folder = r"ENTER_YOUR_FRONTAL_FACES_FOLDER_PATH"
+non_frontal_faces_folder = r"ENTER_YOUR_NON_FRONTAL_FACES_FOLDER_PATH"
+rejected_quality_folder = r"ENTER_YOUR_REJECTED_QUALITY_FOLDER_PATH"
+frontal_cropped_faces_folder = r"ENTER_YOUR_FRONTAL_CROPPED_FACES_FOLDER_PATH"
 
 # Function to clear and recreate folders
 def clear_folders():
@@ -55,16 +55,6 @@ def crop_face(image, landmarks, margin=0.3):
     y_max = min(y_max + y_margin, h)
     
     return image[y_min:y_max, x_min:x_max]
-
-# Function to draw face mesh on the image
-def draw_face_mesh(image, face_landmarks):
-    mp_drawing.draw_landmarks(
-        image=image,
-        landmark_list=face_landmarks,
-        connections=mp_face_mesh.FACEMESH_TESSELATION,
-        landmark_drawing_spec=None,
-        connection_drawing_spec=mp_drawing_styles.get_default_face_mesh_tesselation_style()
-    )
 
 # Calculate sharpness using edge detection
 def calculate_sharpness(image):
