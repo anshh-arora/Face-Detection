@@ -49,36 +49,19 @@ Face detection is a computer vision task where the goal is to identify and locat
 
 ## Flow Chart
 
-Start
-  |
-  v
-Clear and Recreate Folders
-  |
-  v
-Load and Process Images
-  |
-  v
-Detect Faces with MediaPipe
-  |
-  v
-+--------------------------+
-| Multiple Faces Detected? |
-+--------------------------+
-    /          \
-   /            \
-  v              v
-Save to         Frontal Face?
-Rejected           |
-Quality            /    \
-Folder         v       v
-                Save to  Save to
-                Frontal  Non-Frontal
-                Cropped  Faces Folder
-                Faces
-                Folder
-  |
-  v
-End
+| Step                               | Action                                                                 |
+|------------------------------------|------------------------------------------------------------------------|
+| **Start**                          | Begin the process.                                                     |
+| **Clear and Recreate Folders**     | Clean up and set up output directories.                                 |
+| **Load and Process Images**        | Read images from the designated folder.                                 |
+| **Detect Faces with MediaPipe**    | Use MediaPipe to find faces and landmarks.                              |
+| **Multiple Faces Detected?**       | Check if more than one face is present in the image.                    |
+| - Yes                              | Move image to the "Rejected Quality" folder.                            |
+| - No                               | Continue to check if the face is frontal.                               |
+| **Is Face Frontal?**               | Determine if the detected face is frontal.                              |
+| - Yes                              | Save the cropped face image to the "Frontal Cropped Faces" folder.     |
+| - No                               | Save the image to the "Non-Frontal Faces" folder.                       |
+| **End**                            | Finish the process.                                                     |
 
 
 
