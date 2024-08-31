@@ -5,11 +5,11 @@ import mediapipe as mp
 import shutil
 
 # Define file paths (Replace these placeholders with your actual folder paths)
-image_folder = r"C:\Users\arora\Desktop\Ansh programs\smartworks\Face-Detection\Test_images_data"
-frontal_faces_folder = r"C:\Users\arora\Desktop\Ansh programs\smartworks\Face-Detection\Frontal_Cropped_face_data"
-non_frontal_faces_folder = r"C:\Users\arora\Desktop\Ansh programs\smartworks\Face-Detection\Non_Frontal_face_data"
-rejected_quality_folder = r"C:\Users\arora\Desktop\Ansh programs\smartworks\Face-Detection\Rejected_Quality_images"
-frontal_cropped_faces_folder = r"C:\Users\arora\Desktop\Ansh programs\smartworks\Face-Detection\Frontal_Cropped_face_data"
+image_folder = r"ADD_YOUR_IMAGE_FOLDER_PATH"
+frontal_faces_folder = r"ADD_YOUR_FRONTAL_FACES_FOLDER_PATH"
+non_frontal_faces_folder = r"ADD_YOUR_NON_FRONTAL_FACES_FOLDER_PATH"
+rejected_quality_folder = r"ADD_YOUR_REJECTED_QUALITY_FOLDER_PATH"
+frontal_cropped_faces_folder = r"ADD_YOUR_FRONTAL_CROPPED_FACES_FOLDER_PATH"
 
 # Function to clear and recreate folders
 def clear_folders():
