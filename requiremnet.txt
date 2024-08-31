@@ -1,5 +1,0 @@
-os
-shutile
-numpy
-mediapipe
-OpenCV
