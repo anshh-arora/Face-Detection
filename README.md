@@ -69,3 +69,11 @@ Face detection is a computer vision task where the goal is to identify and locat
 
 This script automates the process of face detection and quality assessment for a batch of images, categorizing them based on whether they contain frontal or non-frontal faces and the overall image quality. The organized output folders help in easily accessing and reviewing the processed images.
 
+
+## Contact Information
+For any questions or feedback, feel free to reach out:
+
+- **Email**: [ansharora.cs@gmail.com](mailto:ansharora.cs@gmail.com)
+- **LinkedIn**: [Connect with me on LinkedIn](https://www.linkedin.com/in/ansh-arora-data-scientist/)
+- **Kaggle**: [Follow me on Kaggle](https://www.kaggle.com/ansh1529)
+
